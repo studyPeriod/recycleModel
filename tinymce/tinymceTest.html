@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+	<title>tinymce Test!</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="js/tinymce/tinymce/tinymce.min.js"></script>
+	<script type="text/javascript" >
+	$(function(){
+	//alert("aa");
+		tinymce.init({
+			//选择器，逗号分隔
+			selector: "textarea#02,textarea#03",
+
+			/*mode:"textareas",*/
+			
+
+		    /*****是否隐藏菜单栏，和工具栏大小
+	        menubar: false, 
+	       toolbar_items_size: 'small',
+	       ********/
+
+	        language:'zh_CN',
+
+		    //常用插件
+			plugins: [
+	            "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
+	            "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+	            "table contextmenu directionality emoticons template  paste fullpage textcolor,"
+	        ],
+
+	       /******
+	         insertdatetime_dateformat: "%d-%m-%y",
+	       ********************/
+
+	        //工具栏
+			toolbar1: "undo redo | cut copy paste | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | styleselect formatselect fontselect fontsizeselect",
+	        toolbar2: " searchreplace | bullist numlist | outdent indent blockquote | link unlink anchor image media code | inserttime preview | forecolor backcolor",
+	        toolbar3: "table | hr removeformat | subscript superscript | charmap emoticons | print fullscreen | ltr rtl | spellchecker | visualchars visualblocks nonbreaking template pagebreak restoredraft",
+
+	        /******
+	        重置字体大小
+	        fontsize_formats: "8pt 10pt 12pt 14pt 18pt 24pt 36pt 42pt",
+
+			重置格式
+		    style_formats: [
+		            {title: 'Bold text', inline: 'b'},
+		            {title: 'Red text', inline: 'span', styles: {color: '#f0f'}},
+		            {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
+		            {title: 'Example 1', inline: 'span', classes: 'example1'},
+		            {title: 'Example 2', inline: 'span', classes: 'example2'},
+		            {title: 'Table styles'},
+		            {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
+		        ],
+		        ********************/
+
+	        // 插入模板
+	         templates: [
+	            {title: 'Test template 1', content: 'Test 1111111111111111111111111111111111111111111111111111111111111111111'},
+	            {title: 'Test template 2', content: 'Test 222222222222222222222222222222222222222222222222222222222222222222222'},
+	            {title: 'Test template 3', content: '33333333333333333333333333333333333333333333333333333333333'},
+	        ],
+
+	        //编辑区域宽度，高度
+	        width:960,
+	        height:600,
+
+	        //20s 后自动保存
+	        autosave_interval: "20s"
+
+		 });
+
+
+
+
+	})
+	</script>
+
+<body>
+	<div>
+		<form method="post">
+		    <textarea id="02" ></textarea>
+		</form>
+	</div>
+</body>
+</html>
